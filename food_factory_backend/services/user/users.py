@@ -26,3 +26,15 @@ def insert_user(db_connection, data):
     except Exception as e:
         print(f"Error inserting user: {str(e)}")
         return False
+
+
+def fetchall_users(db_connection):
+    try:
+        cursor = db_connection.cursor()
+        data = cursor.execute(FETCH_ALL_USERS_QUERY)
+        db_connection.commit()
+        return data
+    except Exception as e:
+        print(f"Error fetching users: {str(e)}")
+        return e
+    
