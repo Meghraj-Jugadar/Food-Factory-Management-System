@@ -1,4 +1,4 @@
-from recruit import settings
+from food_factory_backend import settings
 import mysql.connector
 from mysql.connector import Error
 
@@ -36,4 +36,4 @@ def close_conn(connection):
             connection.close()
             print("Custom MySQL connection closed successfully.")
     except Error as e:
-        print(f"Error while closing the connection: {e}")
+        print(f"Error while closing the connection: {e}")
